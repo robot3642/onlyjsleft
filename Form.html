@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style (1).css">
+    <title>Document</title>
+</head>
+<body id="body">
+   <div class="hide">
+    <div class="hidden1">
+        <h1>ใส่ข้อมูล</h1>
+        <div class="hidden-box">
+            </div>
+            <div class="div4">
+                <p>ที่อยู่</p>
+            <input id="address1" type="text" class="in" placeholder="ที่อยู่">
+            </div>
+            <div class="custom-file-upload">
+                <p>รูปภาพ</p>
+                <label for="pic" class="custom-file-label">Choose File</label>
+                <input id="pic" onload="choosePic()" type="file">
+            </div>
+        </div>
+        <button id="submit" class="submit" onclick="submit()">ตกลง</button>
+      </div>
+   </div>
+   <div class="hide2">
+    <div class="hidden2">
+      </div>
+   </div>
+    <div id="big">
+        <nav id="nav">
+            <div>
+              <a href="/project105-main/index.html">  <img src="/kao/Pet Store.png" class="logo" alt=""></a>
+            </div>
+            <div class="center-nav">
+                <a href="/kao/donate.html" class="doNav">Donate</a>
+                <a href="/fluke/help.html" class="blogNav">Blog</a>
+            </div>
+           <div class="login-regis">
+            <div class="login">
+                <button>
+                    <a href="/boos/Login.html">Login</a>
+                </button>
+            </div>
+            <div class="regis">
+                <button>
+                    Register
+                </button>
+            </div>
+           </div>
+        </nav>
+        <div class="Adoption">
+            <h1>  
+                  Adoption
+            </h1>
+        </div>
+        <div class="Process">
+            <h1>
+                Process
+            </h1>
+        </div>
+<div class="From">
+    <h2>
+        Form
+    </h2>
+</div>
+<form id="adoptionForm">
+<div class="main-user-info">
+    <div class="user-input-box">
+      <label for="fullName">Full Name</label>
+      <input type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Enter Full Name"/>
+    </div>
+    
+    <!-- <div class="user-input-box">
+      <label for="username">Username</label>
+      <input type="text"
+              id="username"
+              name="username"
+              placeholder="Enter Username"/>
+    </div> -->
+    <div class="user-input-box">
+      <label for="email">Email</label>
+      <input type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"/>
+    </div>
+    <div class="user-input-box">
+      <label for="phoneNumber">Phone Number</label>
+      <input type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Enter Phone Number"/>
+    </div>
+    <div class="user-input-box">
+      <label for="Address">Address</label>
+      <input type="Address"
+              id="Address"
+              name="Address"
+              placeholder="Enter Address"/>
+    </div>
+    <div class="user-input-box">
+        <label for="Message">Message</label>
+        <input type="Message"
+                id="Message"
+                name="Message"
+                placeholder="Write a message"/>
+      </div>
+  </div>
+    <button type="submit" class="mon-btn" onclick="checkPassword">Submit</button>
+    </form>
+  </div>
+    <footer>
+        <div class="backfooter">
+            <ul>
+                <div class="footer-box1">
+                    <img src="/kao/Pet Store2.png" alt="">
+                    <p>Sample street 10,<br>
+                        Sample city 0000, Thailand</p>
+                        <br>
+                        <p>
+                            Phone :  099 999 9999
+                        </p>
+                        <br>
+                        <p>
+                            Email :  Adopt me @ gmail.com
+                        </p>
+                </div>
+                <div class="footer-box2">
+                    <p>NAVIGATION</p>
+                    <a href="#">Adopt a dog</a>
+                    <a href="#">Ways to help</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact us</a>
+    
+                </div>
+                <div class="footer-box3">
+                    <p>ABOUT DOGS & PUPPIES</p>
+                    <a href="#">Ben</a>
+                    <a href="#">Diesel</a>
+                    <a href="#">Wodan</a>
+                    <a href="#">Bartney</a>
+                    <a href="#">Bailey</a>
+                    <a href="#">Junior</a>
+                </div>
+                <div class="footer-box4">
+                    <p>ABOUT CATS & KITTENS</p>
+                    <a href="#">Lassie</a>
+                    <a href="#">Veiga</a>
+                    <a href="#">Kitty</a>
+                    <a href="#">Gray</a>
+                    <a href="#">Kuro</a>
+                    <a href="#">Tigress</a>
+                </div>
+                <div class="footer-box5">
+                    <p>FOLLOW US</p>
+                    <a href="#"><img src="/kao/Instagram.png" alt="" height="48px" width="48px"></a>
+                    <a href=""><img src="/kao/facebook.png" alt="" height="48px" width="48px"></a>
+                    <a href=""><img src="/kao/in.png" alt="" height="48px" width="48px"></a>
+                    <a href=""><img src="/kao/tiktok.png" alt="" height="48px" width="48px"></a>
+                    <a href=""><img src="/kao/x.png" alt="" height="48px" width="48px"></a>
+    
+                </div>
+            </ul>
+        </div>
+    </footer>
+    <div class="to-top">
+        <a id="top" href="#big"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+    <script>
+       let myinput = document.querySelectorAll('.mon-input');
+let fullNameInput = document.getElementById('fullName');
+let emailInput = document.getElementById('email');
+let phoneNumber = document.getElementById('phoneNumber');
+let address = document.getElementById('Address');
+let message = document.getElementById('Message');
+
+
+function checkPassword(event){
+    event.preventDefault();
+    console.log('12');
+    if(fullNameInput.value === ''){
+        fullNameInput.style.border = '1px solid red'
+        Swal.fire({
+  title: "กรุณากรอกข้อมูลให้ครบ",
+  icon: "error"
+});
+    }
+    else {
+        fullNameInput.style.border =  '1px solid green'
+        Swal.fire({
+  title: "Good job!",
+  icon: "success"
+});
+    }
+    if(emailInput.value === ''){
+        emailInput.style.border = '1px solid red'
+        Swal.fire({
+  title: "กรุณากรอกข้อมูลให้ครบ",
+  icon: "error"
+});
+    }
+    else {
+        emailInput.style.border =  '1px solid green'
+        Swal.fire({
+  title: "Good job!",
+  icon: "success"
+});
+    }
+    if(phoneNumber.value === ''){
+        phoneNumber.style.border = '1px solid red'
+        Swal.fire({
+  title: "กรุณากรอกข้อมูลให้ครบ",
+  icon: "error"
+});
+    }
+    else {
+        phoneNumber.style.border =  '1px solid green'
+        Swal.fire({
+  title: "Good job!",
+  icon: "success"
+});
+    }
+    if(address.value === ''){
+        address.style.border = '1px solid red'
+        Swal.fire({
+  title: "กรุณากรอกข้อมูลให้ครบ",
+  icon: "error"
+});
+    }
+    else {
+        address.style.border =  '1px solid green'
+        Swal.fire({
+  title: "Good job!",
+  icon: "success"
+});
+    }
+    if(message.value === ''){
+        message.style.border = '1px solid red'
+        Swal.fire({
+  title: "กรุณากรอกข้อมูลให้ครบ",
+  icon: "error"
+});
+    }
+    else {
+        message.style.border =  '1px solid green'
+        Swal.fire({
+  title: "สำเร็จ",
+  text: `เจ้าของโพสต์จะติดต่อไปที่เบอร์ของคุณ ${phoneNumber.value} และจะส่งสัตว์เลี้ยงไปยังที่อยู่ของคุณในไม่ช้า ${address.value}`,
+  icon: "success"
+}).then(()=>{
+    window.location.href = "index.html";
+})
+    }
+
+//    myinput.forEach((e)=>{
+//     if(myinput.value == ''){
+//         Swal.fire({
+//   title: "กรุณากรอกข้อมูลให้ครบ",
+//   text: "You clicked the button!",
+//   icon: "error"
+// });
+//     }
+//     else{
+//         Swal.fire({
+//   title: "Good job!",
+//   text: "You clicked the button!",
+//   icon: "success"
+// });
+//     }
+//    })
+}
+        document.getElementById('adoptionForm').addEventListener('submit', checkPassword);
+    </script>
+    <script src="https://kit.fontawesome.com/504d72feaa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    
+</body>
+</html>
